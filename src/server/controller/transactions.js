@@ -17,9 +17,9 @@ exports.pay = (req, res) => {
     const redirectUrl = process.env.REDIRECT_URL;
     data.setRedirectUrl(redirectUrl);
     data.send_email = "False";
-    data.purpose = "Get Horoscope";
+    data.purpose = "Brief Horoscope Report";
     data.amount = amount;
-    data.name = name;
+    data.buyer_name = name;
     data.email = email;
 
     Insta.createPayment(data, function (error, response) {
