@@ -13,6 +13,7 @@ exports.pay = (req, res) => {
     var name = req.body.data_name;
     var email = req.body.data_email;
     var amount = req.body.data_amount;
+    var phone = req.body.data_contact;
     var data = new Insta.PaymentData();
     const redirectUrl = process.env.REDIRECT_URL;
     data.setRedirectUrl(redirectUrl);
@@ -21,6 +22,7 @@ exports.pay = (req, res) => {
     data.amount = amount;
     data.buyer_name = name;
     data.email = email;
+    data.phone = phone;
 
     Insta.createPayment(data, function (error, response) {
         const result=JSON.parse(response);
