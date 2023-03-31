@@ -18,7 +18,7 @@ exports.pay = (req, res) => {
     const redirectUrl = process.env.REDIRECT_URL;
     data.setRedirectUrl(redirectUrl);
     data.send_email = "False";
-    data.purpose = "Brief Horoscope Report";
+    data.purpose = "Horoscope Report";
     data.amount = amount;
     data.buyer_name = name;
     data.email = email;
