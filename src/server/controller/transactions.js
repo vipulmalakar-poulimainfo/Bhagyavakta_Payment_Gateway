@@ -7,7 +7,7 @@ const API_KEY = process.env.API_KEY;
 const AUTH_KEY = process.env.AUTH_KEY;
 
 Insta.setKeys(API_KEY, AUTH_KEY);
-Insta.isSandboxMode(false);
+Insta.isSandboxMode(true);
 
 exports.pay = (req, res) => {
     var name = req.body.data_name;
